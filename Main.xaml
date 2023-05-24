@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="740,2149.3333333333335" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="678,1138.6666666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uga="clr-namespace:UiPath.GoogleCloud.Activities;assembly=UiPath.GoogleCloud.Activities" xmlns:ugc="clr-namespace:UiPath.GoogleCloud.Core;assembly=UiPath.GoogleCloud" xmlns:ugm="clr-namespace:UiPath.GoogleCloud.Models;assembly=UiPath.GoogleCloud" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="44">
+    <scg:List x:TypeArguments="x:String" Capacity="70">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -45,10 +45,36 @@
       <x:String>UiPath.CSV</x:String>
       <x:String>UiPath.CSV.Activities</x:String>
       <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.GoogleCloud.Models</x:String>
+      <x:String>UiPath.GoogleCloud.Activities</x:String>
+      <x:String>UiPath.GoogleCloud.Core</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>Google.Api.Gax</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>Microsoft.Graph</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Enums</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Excel</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="60">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="78">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -108,237 +134,1377 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.GoogleCloud</AssemblyReference>
+      <AssemblyReference>UiPath.GoogleCloud.Activities</AssemblyReference>
+      <AssemblyReference>Google.Api.Gax</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph</AssemblyReference>
+      <AssemblyReference>Microsoft.Graph.Core</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="main" sap:VirtualizedContainerService.HintSize="462,320" sap2010:WorkflowViewState.IdRef="Sequence_20">
+  <Sequence DisplayName="main" sap:VirtualizedContainerService.HintSize="688,1074" sap2010:WorkflowViewState.IdRef="Sequence_20">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="year" />
+      <Variable x:TypeArguments="x:String" Name="day" />
+      <Variable x:TypeArguments="x:String" Name="month" />
+      <Variable x:TypeArguments="x:String" Name="date_run" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="wpu" sap:VirtualizedContainerService.HintSize="400,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
-      <Sequence.Variables>
-        <Variable x:TypeArguments="x:String" Name="response" />
-        <Variable x:TypeArguments="x:String" Name="ppi" />
-        <Variable x:TypeArguments="sd:DataTable" Name="ppi_dt" />
-        <Variable x:TypeArguments="x:String" Name="text" />
-        <Variable x:TypeArguments="sd:DataTable" Name="output_dt" />
-        <Variable x:TypeArguments="sd:DataTable" Name="dt" />
-      </Sequence.Variables>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://download.bls.gov/pub/time.series/wp/wp.data.0.Current" sap:VirtualizedContainerService.HintSize="626,72" sap2010:WorkflowViewState.IdRef="HttpClient_6" Method="GET" Result="[response]" TimeoutMS="6000">
-        <ui:HttpClient.Attachments>
-          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-        </ui:HttpClient.Attachments>
-        <ui:HttpClient.Cookies>
-          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-        </ui:HttpClient.Cookies>
-        <ui:HttpClient.Headers>
-          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-        </ui:HttpClient.Headers>
-        <ui:HttpClient.Parameters>
-          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-        </ui:HttpClient.Parameters>
-        <ui:HttpClient.UrlSegments>
-          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-        </ui:HttpClient.UrlSegments>
-      </ui:HttpClient>
-      <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="output.txt" sap:VirtualizedContainerService.HintSize="626,136.66666666666666" sap2010:WorkflowViewState.IdRef="WriteTextFile_6" Text="[response]" />
-      <ui:ReadTextFile File="{x:Null}" Content="[text]" DisplayName="Read Text File" FileName="output.txt" sap:VirtualizedContainerService.HintSize="626,82" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-      <ui:GenerateDataTable ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="True" ColumnSeparators="&#x9;" DataTable="[ppi_dt]" DisplayName="Generate Data Table" sap:VirtualizedContainerService.HintSize="626,204" sap2010:WorkflowViewState.IdRef="GenerateDataTable_1" Input="[text]" UseColumnHeader="True" />
-      <Assign sap:VirtualizedContainerService.HintSize="626,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_1">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[ppi_dt.Columns(0).ColumnName]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:String">series_id</InArgument>
-        </Assign.Value>
-      </Assign>
-      <ui:FilterDataTable DataTable="[ppi_dt]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="626,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[output_dt]" SelectColumnsMode="Keep">
-        <ui:FilterDataTable.Filters>
-          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-            <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-              <ui:FilterOperationArgument.Column>
-                <InArgument x:TypeArguments="x:String">["year"]</InArgument>
-              </ui:FilterOperationArgument.Column>
-              <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:String">["2022"]</InArgument>
-              </ui:FilterOperationArgument.Operand>
-            </ui:FilterOperationArgument>
-            <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-              <ui:FilterOperationArgument.Column>
-                <InArgument x:TypeArguments="x:String">["period"]</InArgument>
-              </ui:FilterOperationArgument.Column>
-              <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:String">["M12"]</InArgument>
-              </ui:FilterOperationArgument.Operand>
-            </ui:FilterOperationArgument>
-            <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
-              <ui:FilterOperationArgument.Column>
-                <InArgument x:TypeArguments="x:String">["series_id"]</InArgument>
-              </ui:FilterOperationArgument.Column>
-              <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:String">["WPU"]</InArgument>
-              </ui:FilterOperationArgument.Operand>
-            </ui:FilterOperationArgument>
-          </scg:List>
-        </ui:FilterDataTable.Filters>
-        <ui:FilterDataTable.SelectColumns>
-          <scg:List x:TypeArguments="InArgument" Capacity="4">
-            <x:Null />
-          </scg:List>
-        </ui:FilterDataTable.SelectColumns>
-      </ui:FilterDataTable>
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,754" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
-        <ueab:ExcelProcessScopeX.Body>
-          <ActivityAction x:TypeArguments="ui:IExcelProcess">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,666.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_9">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,556" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" ResizeWindow="None" WorkbookPath="bls_ppi.xlsx">
-                <ueab:ExcelApplicationCard.Body>
-                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,275.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,963.3333333333334" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_8">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,876" sap2010:WorkflowViewState.IdRef="Sequence_50">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,765.3333333333334" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_12" ResizeWindow="None" WorkbookPath="[Environment.GetEnvironmentVariable(“userprofile”) + &quot;\Desktop\uipath\bls_ppi\bls_ppi.xlsx&quot;]">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence sap:VirtualizedContainerService.HintSize="496,484.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="False" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ClearRangeX_3" TargetRange="[Excel.Sheet(&quot;results&quot;)]" />
+                    <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="False" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ClearRangeX_5" TargetRange="[Excel.Sheet(&quot;output&quot;)]" />
+                    <Flowchart sap:VirtualizedContainerService.HintSize="1308.6666666666667,896" sap2010:WorkflowViewState.IdRef="Flowchart_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <av:Point x:Key="ShapeLocation">640,22.666666666666664</av:Point>
+                          <av:Size x:Key="ShapeSize">60,74.66666666666667</av:Size>
+                          <x:Double x:Key="Width">1274.3333333333335</x:Double>
+                          <x:Double x:Key="Height">858.6666666666666</x:Double>
+                          <av:PointCollection x:Key="ConnectorLocation">670,97.33333333333334 670,133</av:PointCollection>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Sheet1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[output_dt]" />
-                    </Sequence>
-                  </ActivityAction>
-                </ueab:ExcelApplicationCard.Body>
-              </ueab:ExcelApplicationCard>
-            </Sequence>
-          </ActivityAction>
-        </ueab:ExcelProcessScopeX.Body>
-      </ueab:ExcelProcessScopeX>
-    </Sequence>
-    <Sequence DisplayName="pcu" sap:VirtualizedContainerService.HintSize="400,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_19">
-      <Sequence.Variables>
-        <Variable x:TypeArguments="x:String" Name="response" />
-        <Variable x:TypeArguments="x:String" Name="ppi" />
-        <Variable x:TypeArguments="sd:DataTable" Name="ppi_dt" />
-        <Variable x:TypeArguments="x:String" Name="text" />
-        <Variable x:TypeArguments="sd:DataTable" Name="output_dt" />
-        <Variable x:TypeArguments="sd:DataTable" Name="dt" />
-      </Sequence.Variables>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://download.bls.gov/pub/time.series/pc/pc.data.0.Current" sap:VirtualizedContainerService.HintSize="626,72" sap2010:WorkflowViewState.IdRef="HttpClient_7" Method="GET" Result="[response]" TimeoutMS="6000">
-        <ui:HttpClient.Attachments>
-          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-        </ui:HttpClient.Attachments>
-        <ui:HttpClient.Cookies>
-          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-        </ui:HttpClient.Cookies>
-        <ui:HttpClient.Headers>
-          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-        </ui:HttpClient.Headers>
-        <ui:HttpClient.Parameters>
-          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-        </ui:HttpClient.Parameters>
-        <ui:HttpClient.UrlSegments>
-          <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
-        </ui:HttpClient.UrlSegments>
-      </ui:HttpClient>
-      <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="output.txt" sap:VirtualizedContainerService.HintSize="626,136.66666666666666" sap2010:WorkflowViewState.IdRef="WriteTextFile_7" Text="[response]" />
-      <ui:ReadTextFile File="{x:Null}" Content="[text]" DisplayName="Read Text File" FileName="output.txt" sap:VirtualizedContainerService.HintSize="626,82" sap2010:WorkflowViewState.IdRef="ReadTextFile_2" />
-      <ui:GenerateDataTable ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="True" ColumnSeparators="&#x9;" DataTable="[ppi_dt]" DisplayName="Generate Data Table" sap:VirtualizedContainerService.HintSize="626,204" sap2010:WorkflowViewState.IdRef="GenerateDataTable_2" Input="[text]" UseColumnHeader="True" />
-      <Assign sap:VirtualizedContainerService.HintSize="626,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_2">
-        <Assign.To>
-          <OutArgument x:TypeArguments="x:String">[ppi_dt.Columns(0).ColumnName]</OutArgument>
-        </Assign.To>
-        <Assign.Value>
-          <InArgument x:TypeArguments="x:String">series_id</InArgument>
-        </Assign.Value>
-      </Assign>
-      <ui:FilterDataTable DataTable="[ppi_dt]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="626,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[output_dt]" SelectColumnsMode="Keep">
-        <ui:FilterDataTable.Filters>
-          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-            <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-              <ui:FilterOperationArgument.Column>
-                <InArgument x:TypeArguments="x:String">["year"]</InArgument>
-              </ui:FilterOperationArgument.Column>
-              <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:String">["2022"]</InArgument>
-              </ui:FilterOperationArgument.Operand>
-            </ui:FilterOperationArgument>
-            <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-              <ui:FilterOperationArgument.Column>
-                <InArgument x:TypeArguments="x:String">["period"]</InArgument>
-              </ui:FilterOperationArgument.Column>
-              <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:String">["M12"]</InArgument>
-              </ui:FilterOperationArgument.Operand>
-            </ui:FilterOperationArgument>
-            <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
-              <ui:FilterOperationArgument.Column>
-                <InArgument x:TypeArguments="x:String">["series_id"]</InArgument>
-              </ui:FilterOperationArgument.Column>
-              <ui:FilterOperationArgument.Operand>
-                <InArgument x:TypeArguments="x:String">["PCU"]</InArgument>
-              </ui:FilterOperationArgument.Operand>
-            </ui:FilterOperationArgument>
-          </scg:List>
-        </ui:FilterDataTable.Filters>
-        <ui:FilterDataTable.SelectColumns>
-          <scg:List x:TypeArguments="InArgument" Capacity="4">
-            <x:Null />
-          </scg:List>
-        </ui:FilterDataTable.SelectColumns>
-      </ui:FilterDataTable>
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="626,776.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_4">
-        <ueab:ExcelProcessScopeX.Body>
-          <ActivityAction x:TypeArguments="ui:IExcelProcess">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,689.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_18">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="530,578.6666666666666" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" UseTemplate="True" WorkbookPath="bls_ppi.xlsx">
-                <ueab:ExcelApplicationCard.Body>
-                  <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
-                    </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,275.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <ueab:WriteRangeX Append="True" Destination="[Excel.Sheet(&quot;Sheet1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="False" Source="[output_dt]" />
-                    </Sequence>
-                  </ActivityAction>
-                </ueab:ExcelApplicationCard.Body>
-              </ueab:ExcelApplicationCard>
-            </Sequence>
-          </ActivityAction>
-        </ueab:ExcelProcessScopeX.Body>
-      </ueab:ExcelProcessScopeX>
-    </Sequence>
+                      <Flowchart.StartNode>
+                        <x:Reference>__ReferenceID5</x:Reference>
+                      </Flowchart.StartNode>
+                      <FlowStep x:Name="__ReferenceID1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">570,207.66666666666666</av:Point>
+                            <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">670,292.3333333333333 670,317.6666666666667</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence DisplayName="Request WPU IDs" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="response" />
+                            <Variable x:TypeArguments="x:String" Name="ppi" />
+                            <Variable x:TypeArguments="sd2:DataTable" Name="ppi_dt" />
+                            <Variable x:TypeArguments="x:String" Name="text" />
+                            <Variable x:TypeArguments="sd2:DataTable" Name="output_dt" />
+                            <Variable x:TypeArguments="sd2:DataTable" Name="dt" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Sequence DisplayName="download WPU" sap:VirtualizedContainerService.HintSize="592,1794" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: https://download.bls.gov/pub/time.series/wp/wp.data.0.Current" sap:VirtualizedContainerService.HintSize="530,1478.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="a014f937-1ba3-475e-a5c0-da3c4fe0e4b8" Version="V2">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1259.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayBefore="3" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][d(ctrl)]s[u(ctrl)][u(hk)]" Version="V3" />
+                                    <uix:NSelectItem DisplayName="Select Item 'Downloads (pinned)'" sap:VirtualizedContainerService.HintSize="434,159.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="Downloads (pinned)" ScopeIdentifier="a014f937-1ba3-475e-a5c0-da3c4fe0e4b8" Version="V3">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="11">
+                                          <x:String>Quick access</x:String>
+                                          <x:String>Documents (pinned)</x:String>
+                                          <x:String>Downloads (pinned)</x:String>
+                                          <x:String>Pictures (pinned)</x:String>
+                                          <x:String>home_depot</x:String>
+                                          <x:String>Music</x:String>
+                                          <x:String>Videos</x:String>
+                                          <x:String>Desktop</x:String>
+                                          <x:String>OneDrive</x:String>
+                                          <x:String>ISCEQNC01VDI831</x:String>
+                                          <x:String>Network</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="86, 189, 94, 36" DesignTimeScaleFactor="1.5" FriendlyName="'Downloads (pinned)'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Control Host' cls='NamespaceTreeControl' title='Namespace Tree Control' /&gt;&lt;wnd ctrlid='100' title='Tree View' /&gt;&lt;ctrl name='Downloads (pinned)' role='outline item' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Control Host' cls='NamespaceTreeControl' title='Namespace Tree Control' /&gt;&lt;wnd ctrlid='100' title='Tree View' /&gt;&lt;ctrl name='Downloads (pinned)' role='outline item' automationid='' check:text='Downloads (pinned)' /&gt;" Guid="2cf929de-b102-4d48-abff-a32ee937c529" InformativeScreenshot="10fdbd73d6a2880061ab1cab82ed3087.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target DesignTimeRectangle="11, 104, 938, 49" ElementType="Toolbar" FriendlyName="'Command Module'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Command Module' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Command Module' role='tool bar' automationid='' check:text='Command Module' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="5ed70cb4-da8f-4dbc-ad26-60f699d11fdf" DisplayName="CV Screen Scope 'chrome.exe  Save As'" sap:VirtualizedContainerService.HintSize="434,742" sap2010:WorkflowViewState.IdRef="CVScope_2" SendOnPremData="False" Version="V5">
+                                      <p:CVScope.Body>
+                                        <ActivityAction x:TypeArguments="x:Object">
+                                          <ActivityAction.Argument>
+                                            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                                          </ActivityAction.Argument>
+                                          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                                            <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" NumberOfScrolls="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: InputBox (126,358,496,24)&quot; +&#xD;&#xA;&quot;Anchor: Text 'File name:' (67,364,53,11)&quot;]" DesignTimeCacheId="5ed70cb4-da8f-4dbc-ad26-60f699d11fdf" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,189.33333333333334" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_2" InformativeScreenshot="78111ad645cd25c0b0e2bd4c2def69ee" ScrollDirection="None" Text="[&quot;output&quot;]" Version="V5">
+                                              <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                                                <uc:CvDescriptor Id="ed002df5-2eb9-4bdc-8430-82850bedd20b">
+                                                  <uc:CvDescriptor.Anchors>
+                                                    <x:Array Type="uc:CvElementDescriptor">
+                                                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="67, 364, 53, 11" ElementType="Text" Text="File name:" />
+                                                    </x:Array>
+                                                  </uc:CvDescriptor.Anchors>
+                                                  <uc:CvDescriptor.Target>
+                                                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="126, 358, 496, 24" ElementType="InputBox" />
+                                                  </uc:CvDescriptor.Target>
+                                                </uc:CvDescriptor>
+                                              </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                                              <p:CvTypeIntoWithDescriptor.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="2ad51dbf-7a24-4874-a8e9-a826726a9c2a">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </p:CvTypeIntoWithDescriptor.Target>
+                                            </p:CvTypeIntoWithDescriptor>
+                                            <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" Descriptor="[&quot;Target: Text 'Save' (451,442,26,10)&quot; +&#xD;&#xA;&quot;Anchor: Button (421,434,87,25)&quot;]" DesignTimeCacheId="5ed70cb4-da8f-4dbc-ad26-60f699d11fdf" DesignTimeScaleFactor="1.5" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,188.66666666666666" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="349ad9c6c0872c7e9427126279074858" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                              <p:CvClickWithDescriptor.CursorPosition>
+                                                <ui:CursorPosition Position="Center">
+                                                  <ui:CursorPosition.OffsetX>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetX>
+                                                  <ui:CursorPosition.OffsetY>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:CursorPosition.OffsetY>
+                                                </ui:CursorPosition>
+                                              </p:CvClickWithDescriptor.CursorPosition>
+                                              <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                                <uc:CvDescriptor Id="cbf9f0fd-1cc3-41fa-92e2-e52a4d697594">
+                                                  <uc:CvDescriptor.Anchors>
+                                                    <x:Array Type="uc:CvElementDescriptor">
+                                                      <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="421, 434, 87, 25" ElementType="Button" />
+                                                    </x:Array>
+                                                  </uc:CvDescriptor.Anchors>
+                                                  <uc:CvDescriptor.Target>
+                                                    <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="451, 442, 26, 10" ElementType="Text" Text="Save" />
+                                                  </uc:CvDescriptor.Target>
+                                                </uc:CvDescriptor>
+                                              </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                              <p:CvClickWithDescriptor.Target>
+                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="e86d6054-f6e9-4b8d-bf82-42a4c8450b89">
+                                                  <ui:Target.TimeoutMS>
+                                                    <InArgument x:TypeArguments="x:Int32" />
+                                                  </ui:Target.TimeoutMS>
+                                                  <ui:Target.WaitForReady>
+                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                  </ui:Target.WaitForReady>
+                                                </ui:Target>
+                                              </p:CvClickWithDescriptor.Target>
+                                            </p:CvClickWithDescriptor>
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </p:CVScope.Body>
+                                      <p:CVScope.DesignTimeCache>
+                                        <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                                      </p:CVScope.DesignTimeCache>
+                                      <p:CVScope.DesignTimeCacheContainer>
+                                        <uc:CvCacheContainer>
+                                          <uc:CvCacheContainer.Caches>
+                                            <scg:List x:TypeArguments="uc:CVCache" Capacity="2">
+                                              <uc:CVCache DataSent="False" DisplayName="Screen CV Type Into - 'File na (Main)" Id="5ed70cb4-da8f-4dbc-ad26-60f699d11fdf" InformativeScreenshot="0fcc5aebbd9869b5b3eb16dcbf6e2a9a" LogicalPosition="40, 193" OcrText="Save As X v &gt; ISCEQNC01V... &gt; Downloads v Search Downloads Organize New folder ? ^ Name Date modified Quick access Documents Today (1) Downloads output 5/23/2023 10:04 AM Pictures home_depot Music Videos OneDrive ISCEQNC01VDI83 v &lt; &gt; File name: wp.data.0.Current v Save as type: Text Document v ^ Hide Folders Save Cancel" Position="40, 193" ScaleFactor="1.5" ScreenshotGuid="ce8e9bed-e784-4980-b5b6-ecdd6d35408c" ServerVersion="1">
+                                                <uc:CVCache.CvAnchorRelations>
+                                                  <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                                                    <uc:AnchorRelationInfo IsTargetText="False" Target="33">
+                                                      <uc:AnchorRelationInfo.Anchors>
+                                                        <x:Array Type="x:Int32">
+                                                          <x:Int32>9</x:Int32>
+                                                          <x:Int32>10</x:Int32>
+                                                        </x:Array>
+                                                      </uc:AnchorRelationInfo.Anchors>
+                                                    </uc:AnchorRelationInfo>
+                                                    <uc:AnchorRelationInfo IsTargetText="False" Target="47">
+                                                      <uc:AnchorRelationInfo.Anchors>
+                                                        <x:Array Type="x:Int32">
+                                                          <x:Int32>38</x:Int32>
+                                                          <x:Int32>39</x:Int32>
+                                                        </x:Array>
+                                                      </uc:AnchorRelationInfo.Anchors>
+                                                    </uc:AnchorRelationInfo>
+                                                    <uc:AnchorRelationInfo IsTargetText="False" Target="49">
+                                                      <uc:AnchorRelationInfo.Anchors>
+                                                        <x:Array Type="x:Int32">
+                                                          <x:Int32>42</x:Int32>
+                                                          <x:Int32>43</x:Int32>
+                                                          <x:Int32>44</x:Int32>
+                                                        </x:Array>
+                                                      </uc:AnchorRelationInfo.Anchors>
+                                                    </uc:AnchorRelationInfo>
+                                                    <uc:AnchorRelationInfo IsTargetText="False" Target="48">
+                                                      <uc:AnchorRelationInfo.Anchors>
+                                                        <x:Array Type="x:Int32">
+                                                          <x:Int32>4</x:Int32>
+                                                          <x:Int32>5</x:Int32>
+                                                          <x:Int32>6</x:Int32>
+                                                          <x:Int32>7</x:Int32>
+                                                        </x:Array>
+                                                      </uc:AnchorRelationInfo.Anchors>
+                                                    </uc:AnchorRelationInfo>
+                                                  </scg:List>
+                                                </uc:CVCache.CvAnchorRelations>
+                                                <uc:CVCache.CvTables>
+                                                  <x:Array Type="uc:CvTableInfo">
+                                                    <uc:CvTableInfo>
+                                                      <uc:CvTableInfo.Columns>
+                                                        <x:Array Type="x:Int32">
+                                                          <x:Int32>158</x:Int32>
+                                                          <x:Int32>202</x:Int32>
+                                                          <x:Int32>465</x:Int32>
+                                                          <x:Int32>624</x:Int32>
+                                                          <x:Int32>626</x:Int32>
+                                                          <x:Int32>626</x:Int32>
+                                                        </x:Array>
+                                                      </uc:CvTableInfo.Columns>
+                                                      <uc:CvTableInfo.Rows>
+                                                        <x:Array Type="x:Int32">
+                                                          <x:Int32>99</x:Int32>
+                                                          <x:Int32>144</x:Int32>
+                                                          <x:Int32>184</x:Int32>
+                                                        </x:Array>
+                                                      </uc:CvTableInfo.Rows>
+                                                    </uc:CvTableInfo>
+                                                  </x:Array>
+                                                </uc:CVCache.CvTables>
+                                                <uc:CVCache.CvUiElements>
+                                                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                                                    <uc:CvElementInfo Category="Button" Region="520, 434, 88, 26" />
+                                                    <uc:CvElementInfo Category="Button" Region="421, 434, 87, 25" />
+                                                    <uc:CvElementInfo Category="Icon" Region="426, 39, 18, 18" />
+                                                    <uc:CvElementInfo Category="Icon" Region="32, 216, 15, 18" />
+                                                    <uc:CvElementInfo Category="Icon" Region="123, 171, 14, 13" />
+                                                    <uc:CvElementInfo Category="Icon" Region="24, 122, 18, 16" />
+                                                    <uc:CvElementInfo Category="Icon" Region="32, 144, 16, 19" />
+                                                    <uc:CvElementInfo Category="Icon" Region="5, 4, 21, 20" />
+                                                    <uc:CvElementInfo Category="Icon" Region="177, 161, 17, 19" />
+                                                    <uc:CvElementInfo Category="Icon" Region="122, 195, 14, 14" />
+                                                    <uc:CvElementInfo Category="Icon" Region="123, 147, 14, 13" />
+                                                    <uc:CvElementInfo Category="Icon" Region="22, 298, 20, 14" />
+                                                    <uc:CvElementInfo Category="Icon" Region="32, 169, 16, 16" />
+                                                    <uc:CvElementInfo Category="Icon" Region="533, 74, 19, 19" />
+                                                    <uc:CvElementInfo Category="Icon" Region="30, 264, 19, 19" />
+                                                    <uc:CvElementInfo Category="Icon" Region="24, 328, 18, 17" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="64, 40, 15, 16" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="138, 100, 19, 20" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="556, 77, 13, 14" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="6, 442, 18, 16" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="138, 328, 18, 18" />
+                                                    <uc:CvElementInfo Category="Icon" Region="31, 194, 18, 14" />
+                                                    <uc:CvElementInfo Category="CloseButton" Region="601, 6, 16, 16" />
+                                                    <uc:CvElementInfo Category="Icon" Region="32, 240, 16, 18" />
+                                                    <uc:CvElementInfo Category="Icon" Region="382, 41, 16, 15" />
+                                                    <uc:CvElementInfo Category="Icon" Region="39, 40, 19, 18" />
+                                                    <uc:CvElementInfo Category="Button" Region="372, 32, 36, 33" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="159, 328, 19, 19" />
+                                                    <uc:CvElementInfo Category="Icon" Region="593, 75, 18, 18" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="610, 330, 14, 15" />
+                                                    <uc:CvElementInfo Category="Icon" Region="9, 40, 19, 17" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="68, 78, 12, 12" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="164, 140, 14, 12" />
+                                                    <uc:CvElementInfo Category="InputBox" Region="414, 32, 204, 32" />
+                                                    <uc:CvElementInfo Category="Icon" Region="106, 38, 18, 18" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="540, 98, 14, 12" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="84, 40, 16, 18" />
+                                                    <uc:CvElementInfo Category="Icon" Region="83, 40, 18, 19" />
+                                                    <uc:CvElementInfo Category="Cell" Region="465, 99, 159, 44" />
+                                                    <uc:CvElementInfo Category="Cell" Region="202, 144, 262, 40" />
+                                                    <uc:CvElementInfo Category="Cell" Region="465, 144, 159, 40" />
+                                                    <uc:CvElementInfo Category="Cell" Region="158, 99, 307, 44" />
+                                                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="414, 32, 204, 32" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="41, 173, 8, 10" />
+                                                    <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="372, 31, 36, 34" />
+                                                    <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="593, 75, 18, 18" />
+                                                    <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="120, 344, 16, 14" />
+                                                    <uc:CvElementInfo Category="InputBox" Region="126, 358, 496, 24" />
+                                                    <uc:CvElementInfo Category="InputBox" Region="104, 32, 270, 32" />
+                                                    <uc:CvElementInfo Category="InputBox" Region="125, 382, 495, 22" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="603, 358, 18, 22" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="222, 41, 14, 15" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="346, 37, 20, 23" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="603, 382, 17, 22" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Region="126, 41, 13, 15" />
+                                                    <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="106, 38, 18, 18" />
+                                                  </scg:List>
+                                                </uc:CVCache.CvUiElements>
+                                                <uc:CVCache.OcrTexts>
+                                                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="53">
+                                                    <uc:OcrTextInfo Region="26, 10, 26, 10" Text="Save" />
+                                                    <uc:OcrTextInfo Region="54, 10, 14, 10" Text="As" />
+                                                    <uc:OcrTextInfo Region="602, 8, 13, 12" Text="X" />
+                                                    <uc:OcrTextInfo Region="68, 46, 8, 6" Text="v" />
+                                                    <uc:OcrTextInfo Region="130, 44, 6, 9" Text="&gt;" />
+                                                    <uc:OcrTextInfo Region="143, 42, 77, 12" Text="ISCEQNC01V..." />
+                                                    <uc:OcrTextInfo Region="226, 44, 7, 9" Text="&gt;" />
+                                                    <uc:OcrTextInfo Region="240, 42, 61, 11" Text="Downloads" />
+                                                    <uc:OcrTextInfo Region="350, 44, 12, 8" Text="v" />
+                                                    <uc:OcrTextInfo Region="455, 43, 35, 11" Text="Search" />
+                                                    <uc:OcrTextInfo Region="493, 43, 61, 11" Text="Downloads" />
+                                                    <uc:OcrTextInfo Region="18, 80, 48, 13" Text="Organize" />
+                                                    <uc:OcrTextInfo Region="106, 80, 24, 10" Text="New" />
+                                                    <uc:OcrTextInfo Region="133, 79, 32, 11" Text="folder" />
+                                                    <uc:OcrTextInfo Region="599, 78, 7, 12" Text="?" />
+                                                    <uc:OcrTextInfo Region="142, 106, 10, 8" Text="^" />
+                                                    <uc:OcrTextInfo Region="177, 110, 32, 10" Text="Name" />
+                                                    <uc:OcrTextInfo Region="472, 110, 26, 10" Text="Date" />
+                                                    <uc:OcrTextInfo Region="500, 110, 48, 11" Text="modified" />
+                                                    <uc:OcrTextInfo Region="42, 124, 32, 12" Text="Quick" />
+                                                    <uc:OcrTextInfo Region="76, 127, 34, 8" Text="access" />
+                                                    <uc:OcrTextInfo Region="51, 148, 62, 10" Text="Documents" />
+                                                    <uc:OcrTextInfo Region="180, 140, 33, 14" Text="Today" />
+                                                    <uc:OcrTextInfo Region="216, 141, 14, 12" Text="(1)" />
+                                                    <uc:OcrTextInfo Region="51, 172, 61, 11" Text="Downloads" />
+                                                    <uc:OcrTextInfo Region="198, 166, 37, 13" Text="output" />
+                                                    <uc:OcrTextInfo Region="472, 166, 56, 12" Text="5/23/2023" />
+                                                    <uc:OcrTextInfo Region="532, 166, 29, 10" Text="10:04" />
+                                                    <uc:OcrTextInfo Region="563, 166, 20, 10" Text="AM" />
+                                                    <uc:OcrTextInfo Region="51, 196, 41, 10" Text="Pictures" />
+                                                    <uc:OcrTextInfo Region="50, 220, 70, 14" Text="home_depot" />
+                                                    <uc:OcrTextInfo Region="51, 244, 32, 10" Text="Music" />
+                                                    <uc:OcrTextInfo Region="50, 268, 38, 11" Text="Videos" />
+                                                    <uc:OcrTextInfo Region="43, 300, 50, 10" Text="OneDrive" />
+                                                    <uc:OcrTextInfo Region="43, 332, 95, 10" Text="ISCEQNC01VDI83" />
+                                                    <uc:OcrTextInfo Region="142, 334, 10, 8" Text="v" />
+                                                    <uc:OcrTextInfo Region="164, 333, 8, 9" Text="&lt;" />
+                                                    <uc:OcrTextInfo Region="612, 333, 8, 9" Text="&gt;" />
+                                                    <uc:OcrTextInfo Region="67, 364, 18, 11" Text="File" />
+                                                    <uc:OcrTextInfo Region="88, 367, 32, 8" Text="name:" />
+                                                    <uc:OcrTextInfo Region="130, 363, 94, 14" Text="wp.data.0.Current" />
+                                                    <uc:OcrTextInfo Region="606, 366, 9, 6" Text="v" />
+                                                    <uc:OcrTextInfo Region="51, 388, 25, 10" Text="Save" />
+                                                    <uc:OcrTextInfo Region="79, 391, 12, 8" Text="as" />
+                                                    <uc:OcrTextInfo Region="93, 389, 27, 12" Text="type:" />
+                                                    <uc:OcrTextInfo Region="127, 388, 22, 10" Text="Text" />
+                                                    <uc:OcrTextInfo Region="151, 388, 56, 10" Text="Document" />
+                                                    <uc:OcrTextInfo Region="606, 390, 9, 6" Text="v" />
+                                                    <uc:OcrTextInfo Region="9, 446, 11, 7" Text="^" />
+                                                    <uc:OcrTextInfo Region="25, 444, 26, 11" Text="Hide" />
+                                                    <uc:OcrTextInfo Region="53, 444, 39, 11" Text="Folders" />
+                                                    <uc:OcrTextInfo Region="451, 442, 26, 10" Text="Save" />
+                                                    <uc:OcrTextInfo Region="546, 442, 34, 11" Text="Cancel" />
+                                                  </scg:List>
+                                                </uc:CVCache.OcrTexts>
+                                              </uc:CVCache>
+                                            </scg:List>
+                                          </uc:CvCacheContainer.Caches>
+                                        </uc:CvCacheContainer>
+                                      </p:CVScope.DesignTimeCacheContainer>
+                                      <p:CVScope.OCREngine>
+                                        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                          <ActivityFunc.Argument>
+                                            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                          </ActivityFunc.Argument>
+                                          <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_2" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                                        </ActivityFunc>
+                                      </p:CVScope.OCREngine>
+                                      <p:CVScope.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b8003756-0ef4-49fc-ab27-27fbc5c777aa" InformativeScreenshot="0a807bf05cbf4eea74b34c83dea055e4" WaitForReady="INTERACTIVE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </p:CVScope.Target>
+                                      <p:CVScope.UseLocalServer>
+                                        <InArgument x:TypeArguments="x:Boolean" />
+                                      </p:CVScope.UseLocalServer>
+                                    </p:CVScope>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="f437ccd01475e11de5e0c624dc1f587b.jpg" Selector="&lt;html app='chrome.exe' title='https://download.bls.gov/pub/time.series/wp/wp.data.0.Current' /&gt;" Url="https://download.bls.gov/pub/time.series/wp/wp.data.0.Current" />
+                              </uix:NApplicationCard.TargetApp>
+                            </uix:NApplicationCard>
+                            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Desktop\uipath\bls_ppi&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="530,164.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_7" Overwrite="True" Path="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Downloads\output.txt&quot;]" />
+                          </Sequence>
+                          <Sequence sap:VirtualizedContainerService.HintSize="592,1758.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:ReadTextFile File="{x:Null}" Content="[text]" DisplayName="Read Text File" FileName="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Desktop\uipath\bls_ppi\output.txt&quot;]" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="ReadTextFile_3" />
+                            <ui:GenerateDataTable ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="False" ColumnSeparators="&#x9; " DataTable="[ppi_dt]" DisplayName="Generate Data Table" sap:VirtualizedContainerService.HintSize="334,204" sap2010:WorkflowViewState.IdRef="GenerateDataTable_3" Input="[text]" UseColumnHeader="True" />
+                            <Assign sap:VirtualizedContainerService.HintSize="434,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_7">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[ppi_dt.Columns(0).ColumnName]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">series_id</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign sap:VirtualizedContainerService.HintSize="434,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_8">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[ppi_dt.Columns(3).ColumnName]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">value</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:FilterDataTable DataTable="[ppi_dt]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[output_dt]" SelectColumnsMode="Keep">
+                              <ui:FilterDataTable.Filters>
+                                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                  <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                    <ui:FilterOperationArgument.Column>
+                                      <InArgument x:TypeArguments="x:String">["year"]</InArgument>
+                                    </ui:FilterOperationArgument.Column>
+                                    <ui:FilterOperationArgument.Operand>
+                                      <InArgument x:TypeArguments="x:String">[year]</InArgument>
+                                    </ui:FilterOperationArgument.Operand>
+                                  </ui:FilterOperationArgument>
+                                  <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                    <ui:FilterOperationArgument.Column>
+                                      <InArgument x:TypeArguments="x:String">["period"]</InArgument>
+                                    </ui:FilterOperationArgument.Column>
+                                    <ui:FilterOperationArgument.Operand>
+                                      <InArgument x:TypeArguments="x:String">[month]</InArgument>
+                                    </ui:FilterOperationArgument.Operand>
+                                  </ui:FilterOperationArgument>
+                                  <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
+                                    <ui:FilterOperationArgument.Column>
+                                      <InArgument x:TypeArguments="x:String">["series_id"]</InArgument>
+                                    </ui:FilterOperationArgument.Column>
+                                    <ui:FilterOperationArgument.Operand>
+                                      <InArgument x:TypeArguments="x:String">["WPU"]</InArgument>
+                                    </ui:FilterOperationArgument.Operand>
+                                  </ui:FilterOperationArgument>
+                                </scg:List>
+                              </ui:FilterDataTable.Filters>
+                              <ui:FilterDataTable.SelectColumns>
+                                <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                  <x:Null />
+                                </scg:List>
+                              </ui:FilterDataTable.SelectColumns>
+                            </ui:FilterDataTable>
+                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[output_dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,666.6666666666666" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+                              <ui:ForEachRow.Body>
+                                <ActivityAction x:TypeArguments="sd2:DataRow">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="series_id" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,546.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:String" Name="series_trim" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:UpdateRowItem ColumnName="{x:Null}" ColumnIndex="0" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="338,198" sap2010:WorkflowViewState.IdRef="UpdateRowItem_4" Row="[series_id]" Value="[series_id(&quot;series_id&quot;).ToString.Trim]" />
+                                    <ui:UpdateRowItem ColumnName="{x:Null}" ColumnIndex="3" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="338,198" sap2010:WorkflowViewState.IdRef="UpdateRowItem_6" Row="[series_id]" Value="[Split(series_id(&quot;value&quot;).ToString, &quot;P&quot;)(0).Trim]" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:ForEachRow.Body>
+                            </ui:ForEachRow>
+                            <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;results&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRangeX_4" IgnoreEmptySource="False" Source="[output_dt]" />
+                          </Sequence>
+                        </Sequence>
+                        <FlowStep.Next>
+                          <FlowStep x:Name="__ReferenceID0">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <av:Point x:Key="ShapeLocation">570,317.6666666666667</av:Point>
+                                <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
+                                <av:PointCollection x:Key="ConnectorLocation">670,402.33333333333337 670,427.6666666666667</av:PointCollection>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Sequence DisplayName="Request PCU IDs" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="response" />
+                                <Variable x:TypeArguments="x:String" Name="ppi" />
+                                <Variable x:TypeArguments="sd2:DataTable" Name="ppi_dt" />
+                                <Variable x:TypeArguments="x:String" Name="text" />
+                                <Variable x:TypeArguments="sd2:DataTable" Name="output_dt" />
+                                <Variable x:TypeArguments="sd2:DataTable" Name="dt" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence DisplayName="download WPU" sap:VirtualizedContainerService.HintSize="602,1794" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: https://download.bls.gov/pub/time.series/pc/pc.data.0.Current" sap:VirtualizedContainerService.HintSize="530,1478.6666666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="a014f937-1ba3-475e-a5c0-da3c4fe0e4b8" Version="V2">
+                                  <uix:NApplicationCard.Body>
+                                    <ActivityAction x:TypeArguments="x:Object">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1259.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DelayBefore="3" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="434,162" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" ScopeIdentifier="a014f937-1ba3-475e-a5c0-da3c4fe0e4b8" Shortcuts="[d(hk)][d(ctrl)]s[u(ctrl)][u(hk)]" Version="V3" />
+                                        <uix:NSelectItem DisplayName="Select Item 'Downloads (pinned)'" sap:VirtualizedContainerService.HintSize="434,159.33333333333334" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="Downloads (pinned)" ScopeIdentifier="a014f937-1ba3-475e-a5c0-da3c4fe0e4b8" Version="V3">
+                                          <uix:NSelectItem.Items>
+                                            <scg:List x:TypeArguments="x:String" Capacity="11">
+                                              <x:String>Quick access</x:String>
+                                              <x:String>Documents (pinned)</x:String>
+                                              <x:String>Downloads (pinned)</x:String>
+                                              <x:String>Pictures (pinned)</x:String>
+                                              <x:String>home_depot</x:String>
+                                              <x:String>Music</x:String>
+                                              <x:String>Videos</x:String>
+                                              <x:String>Desktop</x:String>
+                                              <x:String>OneDrive</x:String>
+                                              <x:String>ISCEQNC01VDI831</x:String>
+                                              <x:String>Network</x:String>
+                                            </scg:List>
+                                          </uix:NSelectItem.Items>
+                                          <uix:NSelectItem.Target>
+                                            <uix:TargetAnchorable DesignTimeRectangle="86, 189, 94, 36" DesignTimeScaleFactor="1.5" FriendlyName="'Downloads (pinned)'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Control Host' cls='NamespaceTreeControl' title='Namespace Tree Control' /&gt;&lt;wnd ctrlid='100' title='Tree View' /&gt;&lt;ctrl name='Downloads (pinned)' role='outline item' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Control Host' cls='NamespaceTreeControl' title='Namespace Tree Control' /&gt;&lt;wnd ctrlid='100' title='Tree View' /&gt;&lt;ctrl name='Downloads (pinned)' role='outline item' automationid='' check:text='Downloads (pinned)' /&gt;" Guid="4f83e49a-8a10-4f83-867b-d52f03998399" InformativeScreenshot="10fdbd73d6a2880061ab1cab82ed3087.png" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Save As' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                  <uix:Target DesignTimeRectangle="11, 104, 938, 49" ElementType="Toolbar" FriendlyName="'Command Module'" FullSelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Command Module' role='tool bar' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Command Module' role='tool bar' automationid='' check:text='Command Module' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NSelectItem.Target>
+                                        </uix:NSelectItem>
+                                        <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="789b6973-bb4a-4578-83c4-d715fc766bb6" DisplayName="CV Screen Scope 'chrome.exe  Save As'" sap:VirtualizedContainerService.HintSize="434,742" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V5">
+                                          <p:CVScope.Body>
+                                            <ActivityAction x:TypeArguments="x:Object">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                                <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" NumberOfScrolls="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayBefore="2000" Descriptor="[&quot;Target: InputBox (126,358,496,24)&quot; +&#xD;&#xA;&quot;Anchor: Text 'File name:' (67,364,53,11)&quot;]" DesignTimeCacheId="789b6973-bb4a-4578-83c4-d715fc766bb6" DesignTimeScaleFactor="1.5" DisplayName="CV Type Into - InputBox" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,189.33333333333334" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="5f79ac51f241a570030254e5bd39b61e" ScrollDirection="None" Text="[&quot;output&quot;]" Version="V5">
+                                                  <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                                                    <uc:CvDescriptor Id="67d31991-b028-4ef0-88da-2fe187c734b7">
+                                                      <uc:CvDescriptor.Anchors>
+                                                        <x:Array Type="uc:CvElementDescriptor">
+                                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="67, 364, 53, 11" ElementType="Text" Text="File name:" />
+                                                        </x:Array>
+                                                      </uc:CvDescriptor.Anchors>
+                                                      <uc:CvDescriptor.Target>
+                                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="126, 358, 496, 24" ElementType="InputBox" />
+                                                      </uc:CvDescriptor.Target>
+                                                    </uc:CvDescriptor>
+                                                  </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                                                  <p:CvTypeIntoWithDescriptor.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="2ad51dbf-7a24-4874-a8e9-a826726a9c2a">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </p:CvTypeIntoWithDescriptor.Target>
+                                                </p:CvTypeIntoWithDescriptor>
+                                                <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" Descriptor="[&quot;Target: Text 'Save' (451,442,26,10)&quot; +&#xD;&#xA;&quot;Anchor: Button (421,434,87,25)&quot;]" DesignTimeCacheId="789b6973-bb4a-4578-83c4-d715fc766bb6" DesignTimeScaleFactor="1.5" DisplayName="CV Click - Text" sap:VirtualizedContainerService.HintSize="400,188.66666666666666" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_2" InformativeScreenshot="dac21495a1ba80863d7df54e3baa3cc1" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V5">
+                                                  <p:CvClickWithDescriptor.CursorPosition>
+                                                    <ui:CursorPosition Position="Center">
+                                                      <ui:CursorPosition.OffsetX>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetX>
+                                                      <ui:CursorPosition.OffsetY>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetY>
+                                                    </ui:CursorPosition>
+                                                  </p:CvClickWithDescriptor.CursorPosition>
+                                                  <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                                    <uc:CvDescriptor Id="4a8069d0-53ca-4695-857e-85ac02058d82">
+                                                      <uc:CvDescriptor.Anchors>
+                                                        <x:Array Type="uc:CvElementDescriptor">
+                                                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="421, 434, 87, 25" ElementType="Button" />
+                                                        </x:Array>
+                                                      </uc:CvDescriptor.Anchors>
+                                                      <uc:CvDescriptor.Target>
+                                                        <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="451, 442, 26, 10" ElementType="Text" Text="Save" />
+                                                      </uc:CvDescriptor.Target>
+                                                    </uc:CvDescriptor>
+                                                  </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                                                  <p:CvClickWithDescriptor.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="e86d6054-f6e9-4b8d-bf82-42a4c8450b89">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </p:CvClickWithDescriptor.Target>
+                                                </p:CvClickWithDescriptor>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </p:CVScope.Body>
+                                          <p:CVScope.DesignTimeCache>
+                                            <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+                                          </p:CVScope.DesignTimeCache>
+                                          <p:CVScope.DesignTimeCacheContainer>
+                                            <uc:CvCacheContainer>
+                                              <uc:CvCacheContainer.Caches>
+                                                <scg:List x:TypeArguments="uc:CVCache" Capacity="2">
+                                                  <uc:CVCache DataSent="False" DisplayName="Screen CV Type Into - 'File na (Main)" Id="789b6973-bb4a-4578-83c4-d715fc766bb6" InformativeScreenshot="86db24a724b6b549d714c3ce7acfcb79" LogicalPosition="-5573, 111" OcrText="Save As X v &gt; ISCEQNC01V... &gt; Downloads v Search Downloads Organize New folder ? ^ Name Date modified Quick access Documents Today (1) Downloads output 5/23/2023 10:04 AM Pictures home_depot Music Videos OneDrive ISCEQNC01VDI83 v &lt; &gt; File name: wp.data.0.Current v Save as type: Text Document v ^ Hide Folders Save Cancel" Position="-3715, 74" ScaleFactor="1.5" ScreenshotGuid="7b4ca025-16f1-4053-91b5-7b22a3b18305" ServerVersion="1">
+                                                    <uc:CVCache.CvAnchorRelations>
+                                                      <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                                                        <uc:AnchorRelationInfo IsTargetText="False" Target="33">
+                                                          <uc:AnchorRelationInfo.Anchors>
+                                                            <x:Array Type="x:Int32">
+                                                              <x:Int32>9</x:Int32>
+                                                              <x:Int32>10</x:Int32>
+                                                            </x:Array>
+                                                          </uc:AnchorRelationInfo.Anchors>
+                                                        </uc:AnchorRelationInfo>
+                                                        <uc:AnchorRelationInfo IsTargetText="False" Target="47">
+                                                          <uc:AnchorRelationInfo.Anchors>
+                                                            <x:Array Type="x:Int32">
+                                                              <x:Int32>38</x:Int32>
+                                                              <x:Int32>39</x:Int32>
+                                                            </x:Array>
+                                                          </uc:AnchorRelationInfo.Anchors>
+                                                        </uc:AnchorRelationInfo>
+                                                        <uc:AnchorRelationInfo IsTargetText="False" Target="49">
+                                                          <uc:AnchorRelationInfo.Anchors>
+                                                            <x:Array Type="x:Int32">
+                                                              <x:Int32>42</x:Int32>
+                                                              <x:Int32>43</x:Int32>
+                                                              <x:Int32>44</x:Int32>
+                                                            </x:Array>
+                                                          </uc:AnchorRelationInfo.Anchors>
+                                                        </uc:AnchorRelationInfo>
+                                                        <uc:AnchorRelationInfo IsTargetText="False" Target="48">
+                                                          <uc:AnchorRelationInfo.Anchors>
+                                                            <x:Array Type="x:Int32">
+                                                              <x:Int32>4</x:Int32>
+                                                              <x:Int32>5</x:Int32>
+                                                              <x:Int32>6</x:Int32>
+                                                              <x:Int32>7</x:Int32>
+                                                            </x:Array>
+                                                          </uc:AnchorRelationInfo.Anchors>
+                                                        </uc:AnchorRelationInfo>
+                                                      </scg:List>
+                                                    </uc:CVCache.CvAnchorRelations>
+                                                    <uc:CVCache.CvTables>
+                                                      <x:Array Type="uc:CvTableInfo">
+                                                        <uc:CvTableInfo>
+                                                          <uc:CvTableInfo.Columns>
+                                                            <x:Array Type="x:Int32">
+                                                              <x:Int32>158</x:Int32>
+                                                              <x:Int32>202</x:Int32>
+                                                              <x:Int32>465</x:Int32>
+                                                              <x:Int32>624</x:Int32>
+                                                              <x:Int32>626</x:Int32>
+                                                              <x:Int32>626</x:Int32>
+                                                            </x:Array>
+                                                          </uc:CvTableInfo.Columns>
+                                                          <uc:CvTableInfo.Rows>
+                                                            <x:Array Type="x:Int32">
+                                                              <x:Int32>99</x:Int32>
+                                                              <x:Int32>144</x:Int32>
+                                                              <x:Int32>184</x:Int32>
+                                                            </x:Array>
+                                                          </uc:CvTableInfo.Rows>
+                                                        </uc:CvTableInfo>
+                                                      </x:Array>
+                                                    </uc:CVCache.CvTables>
+                                                    <uc:CVCache.CvUiElements>
+                                                      <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                                                        <uc:CvElementInfo Category="Button" Region="520, 434, 88, 26" />
+                                                        <uc:CvElementInfo Category="Button" Region="421, 434, 87, 25" />
+                                                        <uc:CvElementInfo Category="Icon" Region="426, 39, 18, 18" />
+                                                        <uc:CvElementInfo Category="Icon" Region="32, 216, 15, 18" />
+                                                        <uc:CvElementInfo Category="Icon" Region="123, 171, 14, 13" />
+                                                        <uc:CvElementInfo Category="Icon" Region="24, 122, 18, 16" />
+                                                        <uc:CvElementInfo Category="Icon" Region="32, 144, 16, 19" />
+                                                        <uc:CvElementInfo Category="Icon" Region="5, 4, 21, 20" />
+                                                        <uc:CvElementInfo Category="Icon" Region="177, 161, 17, 19" />
+                                                        <uc:CvElementInfo Category="Icon" Region="122, 195, 14, 14" />
+                                                        <uc:CvElementInfo Category="Icon" Region="123, 147, 14, 13" />
+                                                        <uc:CvElementInfo Category="Icon" Region="22, 298, 20, 14" />
+                                                        <uc:CvElementInfo Category="Icon" Region="32, 169, 16, 16" />
+                                                        <uc:CvElementInfo Category="Icon" Region="533, 74, 19, 19" />
+                                                        <uc:CvElementInfo Category="Icon" Region="30, 264, 19, 19" />
+                                                        <uc:CvElementInfo Category="Icon" Region="24, 328, 18, 17" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="64, 40, 15, 16" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="138, 100, 19, 20" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="556, 77, 13, 14" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="6, 442, 18, 16" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="138, 328, 18, 18" />
+                                                        <uc:CvElementInfo Category="Icon" Region="31, 194, 18, 14" />
+                                                        <uc:CvElementInfo Category="CloseButton" Region="601, 6, 16, 16" />
+                                                        <uc:CvElementInfo Category="Icon" Region="32, 240, 16, 18" />
+                                                        <uc:CvElementInfo Category="Icon" Region="382, 41, 16, 15" />
+                                                        <uc:CvElementInfo Category="Icon" Region="39, 40, 19, 18" />
+                                                        <uc:CvElementInfo Category="Button" Region="372, 32, 36, 33" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="159, 328, 19, 19" />
+                                                        <uc:CvElementInfo Category="Icon" Region="593, 75, 18, 18" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="610, 330, 14, 15" />
+                                                        <uc:CvElementInfo Category="Icon" Region="9, 40, 19, 17" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="68, 78, 12, 12" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="164, 140, 14, 12" />
+                                                        <uc:CvElementInfo Category="InputBox" Region="414, 32, 204, 32" />
+                                                        <uc:CvElementInfo Category="Icon" Region="106, 38, 18, 18" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="540, 98, 14, 12" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="84, 40, 16, 18" />
+                                                        <uc:CvElementInfo Category="Icon" Region="83, 40, 18, 19" />
+                                                        <uc:CvElementInfo Category="Cell" Region="465, 99, 159, 44" />
+                                                        <uc:CvElementInfo Category="Cell" Region="202, 144, 262, 40" />
+                                                        <uc:CvElementInfo Category="Cell" Region="465, 144, 159, 40" />
+                                                        <uc:CvElementInfo Category="Cell" Region="158, 99, 307, 44" />
+                                                        <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="414, 32, 204, 32" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="41, 173, 8, 10" />
+                                                        <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="372, 31, 36, 34" />
+                                                        <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="593, 75, 18, 18" />
+                                                        <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="120, 344, 16, 14" />
+                                                        <uc:CvElementInfo Category="InputBox" Region="126, 358, 496, 24" />
+                                                        <uc:CvElementInfo Category="InputBox" Region="104, 32, 270, 32" />
+                                                        <uc:CvElementInfo Category="InputBox" Region="125, 382, 495, 22" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="603, 358, 18, 22" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="222, 41, 14, 15" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="346, 37, 20, 23" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="603, 382, 17, 22" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Region="126, 41, 13, 15" />
+                                                        <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="106, 38, 18, 18" />
+                                                      </scg:List>
+                                                    </uc:CVCache.CvUiElements>
+                                                    <uc:CVCache.OcrTexts>
+                                                      <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="53">
+                                                        <uc:OcrTextInfo Region="26, 10, 26, 10" Text="Save" />
+                                                        <uc:OcrTextInfo Region="54, 10, 14, 10" Text="As" />
+                                                        <uc:OcrTextInfo Region="602, 8, 13, 12" Text="X" />
+                                                        <uc:OcrTextInfo Region="68, 46, 8, 6" Text="v" />
+                                                        <uc:OcrTextInfo Region="130, 44, 6, 9" Text="&gt;" />
+                                                        <uc:OcrTextInfo Region="143, 42, 77, 12" Text="ISCEQNC01V..." />
+                                                        <uc:OcrTextInfo Region="226, 44, 7, 9" Text="&gt;" />
+                                                        <uc:OcrTextInfo Region="240, 42, 61, 11" Text="Downloads" />
+                                                        <uc:OcrTextInfo Region="350, 44, 12, 8" Text="v" />
+                                                        <uc:OcrTextInfo Region="455, 43, 35, 11" Text="Search" />
+                                                        <uc:OcrTextInfo Region="493, 43, 61, 11" Text="Downloads" />
+                                                        <uc:OcrTextInfo Region="18, 80, 48, 13" Text="Organize" />
+                                                        <uc:OcrTextInfo Region="106, 80, 24, 10" Text="New" />
+                                                        <uc:OcrTextInfo Region="133, 79, 32, 11" Text="folder" />
+                                                        <uc:OcrTextInfo Region="599, 78, 7, 12" Text="?" />
+                                                        <uc:OcrTextInfo Region="142, 106, 10, 8" Text="^" />
+                                                        <uc:OcrTextInfo Region="177, 110, 32, 10" Text="Name" />
+                                                        <uc:OcrTextInfo Region="472, 110, 26, 10" Text="Date" />
+                                                        <uc:OcrTextInfo Region="500, 110, 48, 11" Text="modified" />
+                                                        <uc:OcrTextInfo Region="42, 124, 32, 12" Text="Quick" />
+                                                        <uc:OcrTextInfo Region="76, 127, 34, 8" Text="access" />
+                                                        <uc:OcrTextInfo Region="51, 148, 62, 10" Text="Documents" />
+                                                        <uc:OcrTextInfo Region="180, 140, 33, 14" Text="Today" />
+                                                        <uc:OcrTextInfo Region="216, 141, 14, 12" Text="(1)" />
+                                                        <uc:OcrTextInfo Region="51, 172, 61, 11" Text="Downloads" />
+                                                        <uc:OcrTextInfo Region="198, 166, 37, 13" Text="output" />
+                                                        <uc:OcrTextInfo Region="472, 166, 56, 12" Text="5/23/2023" />
+                                                        <uc:OcrTextInfo Region="532, 166, 29, 10" Text="10:04" />
+                                                        <uc:OcrTextInfo Region="563, 166, 20, 10" Text="AM" />
+                                                        <uc:OcrTextInfo Region="51, 196, 41, 10" Text="Pictures" />
+                                                        <uc:OcrTextInfo Region="50, 220, 70, 14" Text="home_depot" />
+                                                        <uc:OcrTextInfo Region="51, 244, 32, 10" Text="Music" />
+                                                        <uc:OcrTextInfo Region="50, 268, 38, 11" Text="Videos" />
+                                                        <uc:OcrTextInfo Region="43, 300, 50, 10" Text="OneDrive" />
+                                                        <uc:OcrTextInfo Region="43, 332, 95, 10" Text="ISCEQNC01VDI83" />
+                                                        <uc:OcrTextInfo Region="142, 334, 10, 8" Text="v" />
+                                                        <uc:OcrTextInfo Region="164, 333, 8, 9" Text="&lt;" />
+                                                        <uc:OcrTextInfo Region="612, 333, 8, 9" Text="&gt;" />
+                                                        <uc:OcrTextInfo Region="67, 364, 18, 11" Text="File" />
+                                                        <uc:OcrTextInfo Region="88, 367, 32, 8" Text="name:" />
+                                                        <uc:OcrTextInfo Region="130, 363, 94, 14" Text="wp.data.0.Current" />
+                                                        <uc:OcrTextInfo Region="606, 366, 9, 6" Text="v" />
+                                                        <uc:OcrTextInfo Region="51, 388, 25, 10" Text="Save" />
+                                                        <uc:OcrTextInfo Region="79, 391, 12, 8" Text="as" />
+                                                        <uc:OcrTextInfo Region="93, 389, 27, 12" Text="type:" />
+                                                        <uc:OcrTextInfo Region="127, 388, 22, 10" Text="Text" />
+                                                        <uc:OcrTextInfo Region="151, 388, 56, 10" Text="Document" />
+                                                        <uc:OcrTextInfo Region="606, 390, 9, 6" Text="v" />
+                                                        <uc:OcrTextInfo Region="9, 446, 11, 7" Text="^" />
+                                                        <uc:OcrTextInfo Region="25, 444, 26, 11" Text="Hide" />
+                                                        <uc:OcrTextInfo Region="53, 444, 39, 11" Text="Folders" />
+                                                        <uc:OcrTextInfo Region="451, 442, 26, 10" Text="Save" />
+                                                        <uc:OcrTextInfo Region="546, 442, 34, 11" Text="Cancel" />
+                                                      </scg:List>
+                                                    </uc:CVCache.OcrTexts>
+                                                  </uc:CVCache>
+                                                </scg:List>
+                                              </uc:CvCacheContainer.Caches>
+                                            </uc:CvCacheContainer>
+                                          </p:CVScope.DesignTimeCacheContainer>
+                                          <p:CVScope.OCREngine>
+                                            <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                                              <ActivityFunc.Argument>
+                                                <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                                              </ActivityFunc.Argument>
+                                              <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25.333333333333332" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+                                            </ActivityFunc>
+                                          </p:CVScope.OCREngine>
+                                          <p:CVScope.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b8003756-0ef4-49fc-ab27-27fbc5c777aa" InformativeScreenshot="1f858864af06bb8a1890e7a76ef2d18f" WaitForReady="INTERACTIVE">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                            </ui:Target>
+                                          </p:CVScope.Target>
+                                          <p:CVScope.UseLocalServer>
+                                            <InArgument x:TypeArguments="x:Boolean" />
+                                          </p:CVScope.UseLocalServer>
+                                        </p:CVScope>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </uix:NApplicationCard.Body>
+                                  <uix:NApplicationCard.TargetApp>
+                                    <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="36a1157dfb143bffdde876a1736aec5d.jpg" Selector="&lt;html app='chrome.exe' title='https://download.bls.gov/pub/time.series/pc/pc.data.0.Current' /&gt;" Url="https://download.bls.gov/pub/time.series/pc/pc.data.0.Current" />
+                                  </uix:NApplicationCard.TargetApp>
+                                </uix:NApplicationCard>
+                                <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Desktop\uipath\bls_ppi&quot;]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="530,164.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_6" Overwrite="True" Path="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Downloads\output.txt&quot;]" />
+                              </Sequence>
+                              <Delay Duration="00:00:08" sap:VirtualizedContainerService.HintSize="602,92" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                              <ui:ReadTextFile File="{x:Null}" Content="[text]" DisplayName="Read Text File" FileName="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Desktop\uipath\bls_ppi\output.txt&quot;]" sap:VirtualizedContainerService.HintSize="602,82" sap2010:WorkflowViewState.IdRef="ReadTextFile_4" />
+                              <ui:GenerateDataTable ColumnSizes="{x:Null}" NewLineSeparator="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="False" ColumnSeparators="&#x9; " DataTable="[ppi_dt]" DisplayName="Generate Data Table" sap:VirtualizedContainerService.HintSize="602,204" sap2010:WorkflowViewState.IdRef="GenerateDataTable_4" Input="[text]" UseColumnHeader="True" />
+                              <Assign sap:VirtualizedContainerService.HintSize="602,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[ppi_dt.Columns(0).ColumnName]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">series_id</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:FilterDataTable DataTable="[ppi_dt]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="496,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_5" OutputDataTable="[output_dt]" SelectColumnsMode="Keep">
+                                <ui:FilterDataTable.Filters>
+                                  <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                    <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                      <ui:FilterOperationArgument.Column>
+                                        <InArgument x:TypeArguments="x:String">["year"]</InArgument>
+                                      </ui:FilterOperationArgument.Column>
+                                      <ui:FilterOperationArgument.Operand>
+                                        <InArgument x:TypeArguments="x:String">[year]</InArgument>
+                                      </ui:FilterOperationArgument.Operand>
+                                    </ui:FilterOperationArgument>
+                                    <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                      <ui:FilterOperationArgument.Column>
+                                        <InArgument x:TypeArguments="x:String">["period"]</InArgument>
+                                      </ui:FilterOperationArgument.Column>
+                                      <ui:FilterOperationArgument.Operand>
+                                        <InArgument x:TypeArguments="x:String">[month]</InArgument>
+                                      </ui:FilterOperationArgument.Operand>
+                                    </ui:FilterOperationArgument>
+                                    <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
+                                      <ui:FilterOperationArgument.Column>
+                                        <InArgument x:TypeArguments="x:String">["series_id"]</InArgument>
+                                      </ui:FilterOperationArgument.Column>
+                                      <ui:FilterOperationArgument.Operand>
+                                        <InArgument x:TypeArguments="x:String">["PCU"]</InArgument>
+                                      </ui:FilterOperationArgument.Operand>
+                                    </ui:FilterOperationArgument>
+                                  </scg:List>
+                                </ui:FilterDataTable.Filters>
+                                <ui:FilterDataTable.SelectColumns>
+                                  <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                    <x:Null />
+                                  </scg:List>
+                                </ui:FilterDataTable.SelectColumns>
+                              </ui:FilterDataTable>
+                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[output_dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="496,666.6666666666666" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+                                <ui:ForEachRow.Body>
+                                  <ActivityAction x:TypeArguments="sd2:DataRow">
+                                    <ActivityAction.Argument>
+                                      <DelegateInArgument x:TypeArguments="sd2:DataRow" Name="series_id" />
+                                    </ActivityAction.Argument>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,546.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="x:String" Name="series_trim" />
+                                      </Sequence.Variables>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:UpdateRowItem ColumnName="{x:Null}" ColumnIndex="0" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="338,198" sap2010:WorkflowViewState.IdRef="UpdateRowItem_5" Row="[series_id]" Value="[series_id(&quot;series_id&quot;).ToString.Trim]" />
+                                      <ui:UpdateRowItem ColumnName="{x:Null}" ColumnIndex="3" DisplayName="Update Row Item" sap:VirtualizedContainerService.HintSize="338,198" sap2010:WorkflowViewState.IdRef="UpdateRowItem_8" Row="[series_id]" Value="[Split(series_id(&quot;value&quot;).ToString, &quot;P&quot;)(0).Trim]" />
+                                    </Sequence>
+                                  </ActivityAction>
+                                </ui:ForEachRow.Body>
+                              </ui:ForEachRow>
+                              <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="name" DataTable="[output_dt]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="496,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_4" />
+                              <ueab:WriteRangeX Append="True" Destination="[Excel.Sheet(&quot;results&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="496,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRangeX_5" IgnoreEmptySource="False" Source="[output_dt]" />
+                            </Sequence>
+                            <FlowStep.Next>
+                              <FlowStep x:Name="__ReferenceID2">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <av:Point x:Key="ShapeLocation">570,427.6666666666667</av:Point>
+                                    <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
+                                    <av:PointCollection x:Key="ConnectorLocation">670,512.3333333333334 670,537.6666666666666</av:PointCollection>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <Sequence DisplayName="Apply PPI Names" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,2736.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="sd2:DataTable" Name="results_range" />
+                                      <Variable x:TypeArguments="x:Int32" Name="rng_cnt" />
+                                      <Variable x:TypeArguments="sd2:DataTable" Name="final_dt" />
+                                      <Variable x:TypeArguments="sd2:DataTable" Name="results_filtered" />
+                                      <Variable x:TypeArguments="sd2:DataTable" Name="output_range" />
+                                      <Variable x:TypeArguments="sd2:DataTable" Name="output_filter" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ueab:InsertColumnX ColumnFormat="{x:Null}" DisplayName="Insert Column" HasHeaders="True" sap:VirtualizedContainerService.HintSize="530,214.66666666666666" sap2010:WorkflowViewState.IdRef="InsertColumnX_4" NewColumnName="name" Range="[Excel.Sheet(&quot;results&quot;)]" RelativeColumnName="year" RelativePosition="Before" />
+                                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="530,174.66666666666666" sap2010:WorkflowViewState.IdRef="ReadRangeX_4" Range="[Excel.Sheet(&quot;results&quot;)]" SaveTo="[results_range]" />
+                                    <Assign sap:VirtualizedContainerService.HintSize="530,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_16">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[rng_cnt]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[results_range.Rows.Count + 1]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ueab:FillRangeX DestinationRange="[Excel.Sheet(&quot;results&quot;).Range(&quot;B2:B&quot; + rng_cnt.ToString)]" DisplayName="Fill Range" sap:VirtualizedContainerService.HintSize="530,141.33333333333334" sap2010:WorkflowViewState.IdRef="FillRangeX_4" Value="[&quot;=VLOOKUP(A2,config!A:B,2,FALSE)&quot;]" />
+                                    <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="530,465.3333333333333" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_1" Range="[Excel.Sheet(&quot;results&quot;)]" SaveAfterEachRow="False">
+                                      <ueab:ExcelForEachRowX.Body>
+                                        <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
+                                          <ActivityAction.Argument1>
+                                            <DelegateInArgument x:TypeArguments="ue:CurrentRowQuickHandle" Name="CurrentRow" />
+                                          </ActivityAction.Argument1>
+                                          <ActivityAction.Argument2>
+                                            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
+                                          </ActivityAction.Argument2>
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,275.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <ueab:WriteCellX Cell="[CurrentRow.ByField(&quot;footnote_codes&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteCellX_1" Value="[&quot;P&quot;]" />
+                                          </Sequence>
+                                        </ActivityAction>
+                                      </ueab:ExcelForEachRowX.Body>
+                                    </ueab:ExcelForEachRowX>
+                                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="530,174.66666666666666" sap2010:WorkflowViewState.IdRef="ReadRangeX_5" Range="[Excel.Sheet(&quot;results&quot;)]" SaveTo="[results_range]" />
+                                    <ui:FilterDataTable DataTable="[results_range]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="530,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_6" OutputDataTable="[results_filtered]" SelectColumnsMode="Keep">
+                                      <ui:FilterDataTable.Filters>
+                                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                          <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
+                                            <ui:FilterOperationArgument.Column>
+                                              <InArgument x:TypeArguments="x:String">["name"]</InArgument>
+                                            </ui:FilterOperationArgument.Column>
+                                          </ui:FilterOperationArgument>
+                                          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                                            <ui:FilterOperationArgument.Column>
+                                              <InArgument x:TypeArguments="x:String">["name"]</InArgument>
+                                            </ui:FilterOperationArgument.Column>
+                                            <ui:FilterOperationArgument.Operand>
+                                              <InArgument x:TypeArguments="x:String">["#N/A"]</InArgument>
+                                            </ui:FilterOperationArgument.Operand>
+                                          </ui:FilterOperationArgument>
+                                          <ui:FilterOperationArgument BooleanOperator="And" Operator="STARTSWITH">
+                                            <ui:FilterOperationArgument.Column>
+                                              <InArgument x:TypeArguments="x:String">["name"]</InArgument>
+                                            </ui:FilterOperationArgument.Column>
+                                            <ui:FilterOperationArgument.Operand>
+                                              <InArgument x:TypeArguments="x:String">["-214"]</InArgument>
+                                            </ui:FilterOperationArgument.Operand>
+                                          </ui:FilterOperationArgument>
+                                        </scg:List>
+                                      </ui:FilterDataTable.Filters>
+                                      <ui:FilterDataTable.SelectColumns>
+                                        <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                          <x:Null />
+                                        </scg:List>
+                                      </ui:FilterDataTable.SelectColumns>
+                                    </ui:FilterDataTable>
+                                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;output&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="530,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRangeX_6" IgnoreEmptySource="False" Source="[results_filtered]" />
+                                    <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="530,174.66666666666666" sap2010:WorkflowViewState.IdRef="ReadRangeX_6" Range="[Excel.Sheet(&quot;output&quot;)]" SaveTo="[output_range]" />
+                                    <ui:FilterDataTable DataTable="[output_range]" DisplayName="Filter Data Table" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="530,164" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[output_filter]" SelectColumnsMode="Keep">
+                                      <ui:FilterDataTable.Filters>
+                                        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                          <ui:FilterOperationArgument Operand="{x:Null}" BooleanOperator="And" Operator="EMPTY">
+                                            <ui:FilterOperationArgument.Column>
+                                              <InArgument x:TypeArguments="x:String">["name"]</InArgument>
+                                            </ui:FilterOperationArgument.Column>
+                                          </ui:FilterOperationArgument>
+                                          <ui:FilterOperationArgument BooleanOperator="Or" Operator="EQ">
+                                            <ui:FilterOperationArgument.Column>
+                                              <InArgument x:TypeArguments="x:String">["name"]</InArgument>
+                                            </ui:FilterOperationArgument.Column>
+                                            <ui:FilterOperationArgument.Operand>
+                                              <InArgument x:TypeArguments="x:String">["#N/A"]</InArgument>
+                                            </ui:FilterOperationArgument.Operand>
+                                          </ui:FilterOperationArgument>
+                                          <ui:FilterOperationArgument BooleanOperator="Or" Operator="STARTSWITH">
+                                            <ui:FilterOperationArgument.Column>
+                                              <InArgument x:TypeArguments="x:String">["name"]</InArgument>
+                                            </ui:FilterOperationArgument.Column>
+                                            <ui:FilterOperationArgument.Operand>
+                                              <InArgument x:TypeArguments="x:String">["-214"]</InArgument>
+                                            </ui:FilterOperationArgument.Operand>
+                                          </ui:FilterOperationArgument>
+                                        </scg:List>
+                                      </ui:FilterDataTable.Filters>
+                                      <ui:FilterDataTable.SelectColumns>
+                                        <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                          <x:Null />
+                                        </scg:List>
+                                      </ui:FilterDataTable.SelectColumns>
+                                    </ui:FilterDataTable>
+                                    <ueab:ClearRangeX DisplayName="Clear Sheet/Range/Table" HasHeaders="False" sap:VirtualizedContainerService.HintSize="530,120" sap2010:WorkflowViewState.IdRef="ClearRangeX_6" TargetRange="[Excel.Sheet(&quot;output&quot;)]" />
+                                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;output&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="530,164.66666666666666" sap2010:WorkflowViewState.IdRef="WriteRangeX_7" IgnoreEmptySource="False" Source="[output_filter]" />
+                                  </Sequence>
+                                </Sequence>
+                                <FlowStep.Next>
+                                  <FlowStep x:Name="__ReferenceID3">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <av:Point x:Key="ShapeLocation">570,537.6666666666666</av:Point>
+                                        <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
+                                        <av:PointCollection x:Key="ConnectorLocation">670,622.3333333333333 670,663</av:PointCollection>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Sequence DisplayName="Save to CSV" sap:VirtualizedContainerService.HintSize="200,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[date_run]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("MM_dd_yy")]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <ueab:ExportExcelToCsvX DisplayName="Export to CSV" FilePath="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Desktop\uipath\bls_ppi\bls_ppi_&quot; + date_run + &quot;.csv&quot;]" sap:VirtualizedContainerService.HintSize="434,136" sap2010:WorkflowViewState.IdRef="ExportExcelToCsvX_5" TargetRange="[Excel.Sheet(&quot;output&quot;)]" />
+                                    </Sequence>
+                                    <FlowStep.Next>
+                                      <FlowStep x:Name="__ReferenceID4">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <av:Point x:Key="ShapeLocation">570,663</av:Point>
+                                            <av:Size x:Key="ShapeSize">200,84.66666666666667</av:Size>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Sequence DisplayName="Send To GCP" sap:VirtualizedContainerService.HintSize="462,548" sap2010:WorkflowViewState.IdRef="Sequence_82">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="x:String" Name="dev_key" />
+                                            <Variable x:TypeArguments="njl:JObject" Name="json_key" />
+                                            <Variable x:TypeArguments="ss:SecureString" Name="secure_key" />
+                                          </Sequence.Variables>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <Assign sap:VirtualizedContainerService.HintSize="400,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                            <Assign.To>
+                                              <OutArgument x:TypeArguments="x:String">[date_run]</OutArgument>
+                                            </Assign.To>
+                                            <Assign.Value>
+                                              <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("MM_dd_yy")]</InArgument>
+                                            </Assign.Value>
+                                          </Assign>
+                                          <Sequence DisplayName="dev" sap:VirtualizedContainerService.HintSize="400,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap:VirtualizedContainerService.HintSize="478.6666666666667,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[dev_key]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Desktop\uipath\sa_keys\clgx-idap-ccdm-app-dev-2378-fe17c62d6cfd.json"]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <uga:GCPScope ServiceAccountKey="{x:Null}" DisplayName="Google Cloud Scope" sap:VirtualizedContainerService.HintSize="478.6666666666667,1252" sap2010:WorkflowViewState.IdRef="GCPScope_1" ScopeType="ServiceAccountKeyFromFile" ServiceAccountKeyFromFile="[dev_key]">
+                                              <uga:GCPScope.Body>
+                                                <ActivityAction x:TypeArguments="ugc:GCPCmd">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="ugc:GCPCmd" Name="GoogleCloudScopePropertyTag" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1010" sap2010:WorkflowViewState.IdRef="Sequence_52">
+                                                    <Sequence.Variables>
+                                                      <Variable x:TypeArguments="x:String" Name="file_path">
+                                                        <Variable.Default>
+                                                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Desktop\uipath\bls_ppi\&quot; + &quot;bls_ppi_&quot; + date_run + &quot;.csv&quot;" />
+                                                        </Variable.Default>
+                                                      </Variable>
+                                                      <Variable x:TypeArguments="ugm:GCPBucket" Name="GCPBucket" />
+                                                    </Sequence.Variables>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <uga:GCPGetBucket Bucket="[GCPBucket]" BucketName="idap_dev_upload_property_construction_costs" DisplayName="Get Bucket" sap:VirtualizedContainerService.HintSize="338,197.33333333333334" sap2010:WorkflowViewState.IdRef="GCPGetBucket_1" />
+                                                    <uga:GCPUploadObject ContentType="{x:Null}" CustomerManagedKey="{x:Null}" FileResourceToUpload="{x:Null}" Metadata="{x:Null}" Object="{x:Null}" PredefinedAcl="{x:Null}" StorageClass="{x:Null}" Timeout="{x:Null}" Bucket="[GCPBucket]" DisplayName="Upload Object from File" FileToUpload="[file_path]" sap:VirtualizedContainerService.HintSize="338,662" sap2010:WorkflowViewState.IdRef="GCPUploadObject_1" ObjectName="[&quot;ppi_uslabor/&quot; + &quot;bls_ppi_&quot; + date_run + &quot;.csv&quot;]" />
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </uga:GCPScope.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uga:GCPScope>
+                                          </Sequence>
+                                          <Sequence DisplayName="int" sap:VirtualizedContainerService.HintSize="400,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:String" Name="int_key" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap:VirtualizedContainerService.HintSize="478.6666666666667,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[int_key]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Desktop\uipath\sa_keys\clgx-idap-ccdm-app-int-f631-9295bce3a383.json"]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <uga:GCPScope ServiceAccountKey="{x:Null}" DisplayName="Google Cloud Scope" sap:VirtualizedContainerService.HintSize="478.6666666666667,1280.6666666666667" sap2010:WorkflowViewState.IdRef="GCPScope_2" ScopeType="ServiceAccountKeyFromFile" ServiceAccountKeyFromFile="[int_key]">
+                                              <uga:GCPScope.Body>
+                                                <ActivityAction x:TypeArguments="ugc:GCPCmd">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="ugc:GCPCmd" Name="GoogleCloudScopePropertyTag" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,1038.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_84">
+                                                    <Sequence.Variables>
+                                                      <Variable x:TypeArguments="x:String" Default="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Desktop\uipath\bls_ppi\&quot; + &quot;bls_ppi_&quot; + date_run + &quot;.csv&quot;]" Name="file_path" />
+                                                      <Variable x:TypeArguments="ugm:GCPBucket" Name="GCPBucket" />
+                                                    </Sequence.Variables>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <uga:GCPGetBucket Bucket="[GCPBucket]" BucketName="idap_int_upload_property_construction_costs" DisplayName="Get Bucket" sap:VirtualizedContainerService.HintSize="338,120.66666666666667" sap2010:WorkflowViewState.IdRef="GCPGetBucket_2" />
+                                                    <uga:GCPUploadObject ContentType="{x:Null}" CustomerManagedKey="{x:Null}" FileResourceToUpload="{x:Null}" Metadata="{x:Null}" Object="{x:Null}" PredefinedAcl="{x:Null}" StorageClass="{x:Null}" Timeout="{x:Null}" Bucket="[GCPBucket]" DisplayName="Upload Object from File" FileToUpload="[file_path]" sap:VirtualizedContainerService.HintSize="338,767.3333333333334" sap2010:WorkflowViewState.IdRef="GCPUploadObject_2" ObjectName="[&quot;ppi_uslabor/&quot; + &quot;bls_ppi_&quot; + date_run + &quot;.csv&quot;]" />
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </uga:GCPScope.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uga:GCPScope>
+                                          </Sequence>
+                                          <Sequence DisplayName="prd" sap:VirtualizedContainerService.HintSize="400,84.66666666666667" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                                            <Sequence.Variables>
+                                              <Variable x:TypeArguments="x:String" Name="prd_key" />
+                                            </Sequence.Variables>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <Assign sap:VirtualizedContainerService.HintSize="478.6666666666667,63.333333333333336" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[prd_key]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\Desktop\uipath\sa_keys\clgx-idap-ccdm-app-prd-f311-bfcd5a481696.json"]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <uga:GCPScope ServiceAccountKey="{x:Null}" DisplayName="Google Cloud Scope" sap:VirtualizedContainerService.HintSize="478.6666666666667,739.3333333333334" sap2010:WorkflowViewState.IdRef="GCPScope_3" ScopeType="ServiceAccountKeyFromFile" ServiceAccountKeyFromFile="[prd_key]">
+                                              <uga:GCPScope.Body>
+                                                <ActivityAction x:TypeArguments="ugc:GCPCmd">
+                                                  <ActivityAction.Argument>
+                                                    <DelegateInArgument x:TypeArguments="ugc:GCPCmd" Name="GoogleCloudScopePropertyTag" />
+                                                  </ActivityAction.Argument>
+                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,497.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_86">
+                                                    <Sequence.Variables>
+                                                      <Variable x:TypeArguments="x:String" Default="[Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + &quot;\Desktop\uipath\bls_ppi\&quot; + &quot;bls_ppi_&quot; + date_run + &quot;.csv&quot;]" Name="file_path" />
+                                                      <Variable x:TypeArguments="ugm:GCPBucket" Name="GCPBucket" />
+                                                    </Sequence.Variables>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <uga:GCPGetBucket Bucket="[GCPBucket]" BucketName="idap_prd_upload_property_construction_costs" DisplayName="Get Bucket" sap:VirtualizedContainerService.HintSize="338,120.66666666666667" sap2010:WorkflowViewState.IdRef="GCPGetBucket_3" />
+                                                    <uga:GCPUploadObject ContentType="{x:Null}" CustomerManagedKey="{x:Null}" FileResourceToUpload="{x:Null}" Metadata="{x:Null}" Object="{x:Null}" PredefinedAcl="{x:Null}" StorageClass="{x:Null}" Timeout="{x:Null}" Bucket="[GCPBucket]" DisplayName="Upload Object from File" FileToUpload="[file_path]" sap:VirtualizedContainerService.HintSize="338,226" sap2010:WorkflowViewState.IdRef="GCPUploadObject_3" ObjectName="[&quot;ppi_uslabor/&quot; + &quot;bls_ppi_&quot; + date_run + &quot;.csv&quot;]" />
+                                                  </Sequence>
+                                                </ActivityAction>
+                                              </uga:GCPScope.Body>
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </uga:GCPScope>
+                                          </Sequence>
+                                        </Sequence>
+                                      </FlowStep>
+                                    </FlowStep.Next>
+                                  </FlowStep>
+                                </FlowStep.Next>
+                              </FlowStep>
+                            </FlowStep.Next>
+                          </FlowStep>
+                        </FlowStep.Next>
+                      </FlowStep>
+                      <x:Reference>__ReferenceID0</x:Reference>
+                      <FlowStep x:Name="__ReferenceID5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">570,133</av:Point>
+                            <av:Size x:Key="ShapeSize">200,54</av:Size>
+                            <av:PointCollection x:Key="ConnectorLocation">670,187 670,207.66666666666666</av:PointCollection>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:IfElseIf DisplayName="Set Date to Obtain Data" sap:VirtualizedContainerService.HintSize="200,54" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
+                          <ui:IfElseIf.ConditionBlocks>
+                            <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                              <ui:IfElseIfBlock BlockType="If" Condition="[DateTime.Now.ToString(&quot;MM&quot;) =&quot;01&quot;]">
+                                <ui:IfElseIfBlock.Then>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="492.6666666666667,242" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.6666666666667,131.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                                      <ui:MultipleAssign.AssignOperations>
+                                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">[year]</OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">[DateTime.Now.AddYears(-1).ToString("yyyy")]</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">["M" + DateTime.Now.AddMonths(-1).ToString("MM")]</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                        </scg:List>
+                                      </ui:MultipleAssign.AssignOperations>
+                                    </ui:MultipleAssign>
+                                  </Sequence>
+                                </ui:IfElseIfBlock.Then>
+                              </ui:IfElseIfBlock>
+                              <ui:IfElseIfBlock BlockType="Else">
+                                <ui:IfElseIfBlock.Then>
+                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="492.6666666666667,242" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="430.6666666666667,131.33333333333334" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                                      <ui:MultipleAssign.AssignOperations>
+                                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">[year]</OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">[DateTime.Now.ToString("yyyy")]</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                                            <ui:AssignOperation.To>
+                                              <OutArgument x:TypeArguments="x:String">[month]</OutArgument>
+                                            </ui:AssignOperation.To>
+                                            <ui:AssignOperation.Value>
+                                              <InArgument x:TypeArguments="x:String">["M" + DateTime.Now.AddMonths(-1).ToString("MM")]</InArgument>
+                                            </ui:AssignOperation.Value>
+                                          </ui:AssignOperation>
+                                        </scg:List>
+                                      </ui:MultipleAssign.AssignOperations>
+                                    </ui:MultipleAssign>
+                                  </Sequence>
+                                </ui:IfElseIfBlock.Then>
+                              </ui:IfElseIfBlock>
+                            </sc:BindingList>
+                          </ui:IfElseIf.ConditionBlocks>
+                        </ui:IfElseIf>
+                        <FlowStep.Next>
+                          <x:Reference>__ReferenceID1</x:Reference>
+                        </FlowStep.Next>
+                      </FlowStep>
+                      <x:Reference>__ReferenceID2</x:Reference>
+                      <x:Reference>__ReferenceID3</x:Reference>
+                      <x:Reference>__ReferenceID4</x:Reference>
+                    </Flowchart>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
   </Sequence>
 </Activity>
